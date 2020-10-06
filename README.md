@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Install in local
+- Clone/Download project
+- cd to project(mernstack-crud)
+- npm install
+- npm start
+- cd backend
+- npm install
+- npx nodemon server.js
+
 ## Available Scripts
 
 In the project directory, you can run:
