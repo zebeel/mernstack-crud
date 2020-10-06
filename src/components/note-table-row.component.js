@@ -7,6 +7,13 @@ export default class NoteTableRow extends Component {
     deleteNote = () => {
         axios.delete('http://localhost:4000/notes/delete-note/'+this.props.note._id).then((res) => {
             console.log("Note deleted")
+            let notes = this.props.NL.state.notes
+            notes.map((note, i) => {
+                if(note._id === this.props.note._id) {
+                    delete notes[i]
+                }
+            })
+            this.props.NL.setState({notes: notes})
         }).catch((error) => {
             console.log(error)
         })

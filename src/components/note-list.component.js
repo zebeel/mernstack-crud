@@ -7,7 +7,7 @@ export default class NoteList extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {notes: [], isChanged: false}
+    this.state = {notes: []}
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ export default class NoteList extends Component {
 
   DataTable() {
     return this.state.notes.map((note, i) => {
-      return <NoteTableRow note={note} key={i} />
+      return <NoteTableRow note={note} key={i} NL={this}/>
     })
   }
 
